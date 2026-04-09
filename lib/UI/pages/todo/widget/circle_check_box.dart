@@ -13,9 +13,6 @@ class CircleCheckBox extends StatelessWidget {
     return Container(
       width: 24,
       height: 24,
-      child: value
-      ? Icon(Icons.check, color: Colors.white, size: 16)
-      : null,
       decoration: BoxDecoration(
         shape: .circle,
         color: value
@@ -24,7 +21,10 @@ class CircleCheckBox extends StatelessWidget {
         border: value 
         ? null
         : .all(color: Colors.grey),
-      ), 
+      ),
+      child: value
+      ? Icon(Icons.check, color: Colors.white, size: 16)
+      : null, 
     );
   }
 }
